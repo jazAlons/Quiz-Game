@@ -23,3 +23,12 @@ body{
     overflow:hidden;
     position: relative;
 }
+
+/* SCREENS */
+
+
+.screen { /* Hide all screens by default and center their content*/
+    display: none;
+    padding: 2rem;
+    text-align: center;
+}
