@@ -148,4 +148,10 @@ button{
     padding: 15px 30px;
     font-size: 1.1rem;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+
+}
+
+button:hover{
+    background-color: #d45b28;
 }
