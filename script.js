@@ -13,3 +13,52 @@ const maxScoreSpan = document.getElementById("max-score");
 const resultMessage = document.getElementById("result-message");
 const restartButton = document.getElementById("restart-btn");
 const progressBar = document.getElementById("progress");
+
+
+const quizQuestions = [
+    {
+        question: "¿Cuál es el nombre oficial de la Ciudad de México?",
+        answers: [
+            { text: "A) Ciudad Federal", correct: false },
+            { text: "B) Distrito Nacional", correct: false },
+            { text: "C) Ciudad de México (CDMX)", correct: true },
+            { text: "D) Capital Mexicana", correct: false }
+        ]
+    },
+    {
+        question: "¿Cuál es el edificio más alto de la Ciudad de México en 2024?",
+        answers: [
+            { text: "A) Torre Latinoamericana", correct: false },
+            { text: "B) World Trade Center", correct: false },
+            { text: "C) Torre Reforma", correct: true },
+            { text: "D) Torre Mayor", correct: false }
+        ]
+    },
+    {
+        question: "¿Qué importante zona arqueológica se encuentra dentro de la Ciudad de México?",
+        answers: [
+            { text: "A) Teotihuacán", correct: false },
+            { text: "B) Templo Mayor", correct: true },
+            { text: "C) Monte Álban", correct: false },
+            { text: "D) Chichén Itzá", correct: false }
+        ]
+    },
+    {
+        question: "¿En qué alcaldía se encuentra la UNAM (Ciudad Universitaria)?",
+        answers: [
+            { text: "A) Miguel Hidalgo", correct: false },
+            { text: "B) Coyoacán", correct: true },
+            { text: "C) Benito Juárez", correct: false },
+            { text: "D) Tlalpan", correct: false }
+        ]
+    },
+    {
+        question: "¿Cuál es el bosque urbano más grande de la Ciudad de México?",
+        answers: [
+            { text: "A) Parque Hundido", correct: false },
+            { text: "B) Bosque de Chapultepec", correct: true },
+            { text: "C) Parque México", correct: false },
+            { text: "D) Viveros de Coyoacán", correct: false }
+        ]
+    }
+];
