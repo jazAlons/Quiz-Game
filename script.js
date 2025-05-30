@@ -89,6 +89,15 @@ function startQuiz(){
     showQuestion()
 }
 
+
+function showQuestion(){
+    // reset state
+
+    answerDisabled = false
+    const currentQuestion = quizQuestions[currentQuestionIndex]
+
+    currentQuestionSpan.textContent= currentQuestionIndex + 1
+}
 function restartQuiz(){
     console.log("quiz re-started");
 }
