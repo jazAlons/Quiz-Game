@@ -62,3 +62,39 @@ body{
     color: #666;
     margin-bottom: 10px;
 }
+
+
+.answers-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 25px;    
+}
+
+.answer-btn{
+    background-color: #f8f0e5;
+    color: #333;
+    border-radius: 10px;
+    padding: 1rem;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+.answer-btn:hover{
+    background-color: #eadbc8;
+    border-color: #dac0ae;
+
+}
+
+.answer-btn.correct{
+    background-color: #e6fff0;
+    border-color: #a3f0c4;
+    color: #28a745;
+}
+
+.answer-btn.incorrect{
+    background-color: #fff0f0;
+    border-color: #ffbdbd;
+    color: #dc3545;
+}
