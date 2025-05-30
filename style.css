@@ -161,3 +161,17 @@ button{
 button:hover{
     background-color: #d45b28;
 }
+
+/* RESPONSIVE DESIGN */
+
+@media(max-width:500px){
+    /* when we hit 500px and below, implement the styles below */
+
+    .screen{
+        padding: 1rem;
+    }
+
+    #start-screen h1{
+        font-size: 2rem;
+    }
+}
