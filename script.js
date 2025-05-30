@@ -78,7 +78,7 @@ startButton.addEventListener("click", startQuiz)
 restartButton.addEventListener("click", restartQuiz)
 
 function startQuiz(){
-    console.log("quiz starded");
+    
     // reset vars
     currentQuestionIndex = 0;
     scoreSpan.textContent = 0;
@@ -128,7 +128,7 @@ function selectAnswer(event){
     Array.from(answersContainer.children).forEach((button) => {
     if(button.dataset.correct=="true"){
         button.classList.add("correct");
-    } else{
+    } else if (button === selectedButton){
         button.classList.add("incorrect");
     }
 });
@@ -153,8 +153,24 @@ function showResults(){
     resultScreen.classList.add("active")
 
     finalScoreSpan.textContent = score;
+
+    const percentage = (score / quizQuestions.length) * 100
+
+    if (percentage === 100) {
+    resultMessage.textContent = "¡Perfecto! Has respondido todas las preguntas correctamente.";
+    } else if (percentage >= 80) {
+        resultMessage.textContent = "¡Buen trabajo! Estás muy cerca de la perfección.";
+    } else if (percentage >= 60) {
+        resultMessage.textContent = "¡Buen esfuerzo! Sigue practicando para mejorar aún más.";
+    } else if (percentage >= 40) {
+        resultMessage.textContent = "¡Nada mal! Continúa intentándolo y mejorarás.";
+    } else {
+        resultMessage.textContent = "No te desanimes. Sigue estudiando y verás tu progreso.";
+}
 }
 
 function restartQuiz(){
-    console.log("quiz re-started");
+    resultScreen.classList.remove("active");
+    startQuiz();
+
 }
