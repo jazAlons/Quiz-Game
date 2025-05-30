@@ -32,3 +32,15 @@ body{
     padding: 2rem;
     text-align: center;
 }
+
+.screen.active{
+    display: block;
+}
+
+/* START SCREEN */
+
+#start-screen h1{
+    color: #e86a33;
+    margin-bottom: 20px;
+    font-size:2.5rem;
+}
