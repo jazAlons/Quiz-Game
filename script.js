@@ -97,7 +97,64 @@ function showQuestion(){
     const currentQuestion = quizQuestions[currentQuestionIndex]
 
     currentQuestionSpan.textContent= currentQuestionIndex + 1
+
+    const progressPercent = (currentQuestionIndex / quizQuestions.length) * 100;
+
+    progressBar.style.width = progressPercent + "%"
+
+    questionText.textContent = currentQuestion.question
+
+    answersContainer.innerHTML = "";
+    currentQuestion.answers.forEach(answer =>{
+        const button = document.createElement("button")
+        button.textContent = answer.text
+        button.classList.add("answer-btn")
+
+        button.dataset.correct = answer.correct;
+        button.addEventListener("click", selectAnswer);
+
+        answersContainer.appendChild(button);
+    })
 }
+
+function selectAnswer(event){
+    if(answerDisabled) return
+
+    answerDisabled = true
+
+    const selectedButton = event.target;
+    const isCorrect = selectedButton.dataset.correct === "true"
+
+    Array.from(answersContainer.children).forEach((button) => {
+    if(button.dataset.correct=="true"){
+        button.classList.add("correct");
+    } else{
+        button.classList.add("incorrect");
+    }
+});
+    if(isCorrect){
+        score++;
+        scoreSpan.textContent = score
+    }
+
+    setTimeout(() =>{
+        currentQuestionIndex++;
+        // check if there are more questions or if the quiz is over
+        if(currentQuestionIndex < quizQuestions.length){
+            showQuestion()
+        } else{
+           showResults() 
+        }
+    }, 1000)
+}
+
+function showResults(){
+    quizScreen.classList.remove("active")
+    resultScreen.classList.add("active")
+
+    finalScoreSpan.textContent = score;
+}
+
 function restartQuiz(){
     console.log("quiz re-started");
 }
