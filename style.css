@@ -6,7 +6,11 @@
     box-sizing: border-box ;
 }
 
-div{
     width: 100px;
-    padding: 20px;
+body{
+    background: #f5efe6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
