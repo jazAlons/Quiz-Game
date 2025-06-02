@@ -28,3 +28,6 @@ This is a simple and interactive web quiz application to test your knowledge wit
 - CSS3
 - JavaScript
 
+## Link
+
+https://reliable-mandazi-20ed34.netlify.app/
